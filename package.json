@@ -1,0 +1,19 @@
+{
+  "name": "genai-website-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "child_process": "^1.0.2",
+    "dotenv": "^17.2.1",
+    "openai": "^5.12.2"
+  }
+}
