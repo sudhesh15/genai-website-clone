@@ -1,38 +1,58 @@
-1. Folder Structure
+GENAI Website Cloner
+This project is a simple website UI cloner built with Node.js.
+It lets you clone the HTML, CSS, and images of any public website for offline viewing.
 
+📂 Folder Structure
 GENAI-WEBSITE-CLONE/
 ├── node_modules/
 ├── .env
 ├── .gitignore
+├── genai-website-clone-application.mp4 (demo video, optional)
 ├── package-lock.json
 ├── package.json
 ├── README.md
 └── website-cloner.js
 
-2. High-level Explanation of website-cloner.js
-Purpose:
-This script clones the visual UI of any public website.
+🚀 High-Level Overview of website-cloner.js
+Loads a target website using Puppeteer (headless browser).
 
-How it works (high level):
+Extracts and rewrites the HTML structure with Cheerio.
 
-Accepts a website URL (and optionally a target folder name).
+Scrapes all linked CSS files, merges them, and saves to styles.css.
 
-Uses Puppeteer to load and render the website as a browser would.
+Downloads all images, background styles, and SVGs for offline use.
 
-Scrapes all visible HTML, CSS files, and images (including lazy-loaded, background images, SVGs).
+Saves results in a local folder containing:
 
-Downloads those assets and rewrites links so they work locally.
+index.html
 
-Outputs a folder (e.g., cloned-example.com/) containing an index.html, styles.css, and images for offline viewing of the site’s appearance.
+styles.css
 
-3. How to Run
-Install dependencies:
+media assets (images, icons, etc.)
 
+This gives you a static UI copy of the site.
+
+⚙️ How to Run
+Install dependencies with:
 npm install
-Set your OpenAI API key in .env:
-OPENAI_API_KEY=your_api_key
+
+Make sure .env file is created with necessary keys (if required).
 
 Run the website cloner script:
-
 node website-cloner.js
-The script will prompt or use hardcoded settings to clone the target website as described above.
+
+The cloned site files will be saved in a new folder. For example:
+cloned-example.com/
+├── index.html
+├── styles.css
+├── image1.png
+└── ...
+
+📝 Notes
+This clones only the UI (frontend) of the website.
+
+Backend code, APIs, or dynamic functionality will not be cloned.
+
+Works best on static or semi-static sites.
+
+Puppeteer may need extra steps in some environments (Chromium dependencies).
