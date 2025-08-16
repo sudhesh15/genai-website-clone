@@ -12,8 +12,12 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.11.0",
+    "cheerio": "^1.1.2",
     "child_process": "^1.0.2",
     "dotenv": "^17.2.1",
-    "openai": "^5.12.2"
+    "fs-extra": "^11.3.1",
+    "openai": "^5.12.2",
+    "path": "^0.12.7",
+    "puppeteer": "^24.16.2"
   }
 }
